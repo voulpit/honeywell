@@ -1,0 +1,25 @@
+Write a small ATM simulator application in Java (can be console application or other types) which has the following functionalities:
+- display list of commands
+- select desired command
+- accept input for command from the user (from the console or window)
+The ATM should ask for the card number from the user and validate it against the card PIN code (4 digits).
+Commands available to the user:
+- login user with card number and PIN
+- view available balance
+- withdraw cash
+- deposit cash
+- change card PIN
+- logoff user
+
+The ATM application should work in conjunction with another application called the server.
+The server is responsible for storing all data of the users and the server is queried by the ATM application for all relevant user operations.
+A socket connection should be present as the means of communication between the client (ATM) and the server.
+The format of the data used as the communication protocol is left at the discretion of the developer.
+
+The ATM card information should be persistent in the server, meaning it should remember the available cash for each card,
+even after restarting the application.
+The ATM server database can be stored in a file or other methods (using a real database).
+In the main method/database file, please take care to already have a user registered available for testing.
+Since this is a Java application, we want to see an object-oriented approach to modelling (use classes).
+Take care of the code formatting to be consistent and intelligible.
+Design patterns are encouraged.
