@@ -20,6 +20,6 @@ The ATM card information should be persistent in the server, meaning it should r
 even after restarting the application.
 The ATM server database can be stored in a file or other methods (using a real database).
 In the main method/database file, please take care to already have a user registered available for testing.
-Since this is a Java application, we want to see an object-oriented approach to modelling (use classes).
+Since this is a Java application, we want to see an object-oriented approach to modeling (use classes).
 Take care of the code formatting to be consistent and intelligible.
 Design patterns are encouraged.

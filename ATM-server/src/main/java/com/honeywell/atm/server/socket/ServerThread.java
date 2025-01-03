@@ -75,8 +75,7 @@ public class ServerThread extends Thread {
         if (requestDto instanceof CardDetailsRequestDto) {
             session.setCardNumber(((CardDetailsRequestDto) requestDto).getCardNumber());
             session.setPin(((CardDetailsRequestDto) requestDto).getPin());
-        }
-        if (requestDto instanceof PinChangeRequestDto) {
+        } else if (requestDto instanceof PinChangeRequestDto) {
             session.setPin(((PinChangeRequestDto) requestDto).getNewPin());
         }
     }
