@@ -15,7 +15,7 @@ import org.springframework.validation.annotation.Validated;
 @Component
 @Validated
 public class RequestHandler {
-    private final CardOpsService cardOpsService;
+    private CardOpsService cardOpsService;
 
     public RequestHandler(CardOpsService cardOpsService) {
         this.cardOpsService = cardOpsService;
@@ -51,5 +51,9 @@ public class RequestHandler {
 
     private CardDetails handle(@Valid PinChangeRequestDto request) {
         return cardOpsService.changePin(request.getCardNumber(), request.getPin(), request.getNewPin());
+    }
+
+    public void setCardOpsService(CardOpsService cardOpsService) {
+        this.cardOpsService = cardOpsService;
     }
 }
