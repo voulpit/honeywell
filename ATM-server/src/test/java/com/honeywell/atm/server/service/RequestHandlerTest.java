@@ -105,7 +105,6 @@ public class RequestHandlerTest {
     public void handlePinChangeRequestDto_invalidNewPin() {
         PinChangeRequestDto requestDto = new PinChangeRequestDto(VALID_PIN, "12345");
         requestDto.setCardNumber(VALID_CARD_NO);
-        requestDto.setPin(VALID_PIN);
         Assertions.assertThrows(ConstraintViolationException.class, () -> requestHandler.handle(requestDto));
     }
 
