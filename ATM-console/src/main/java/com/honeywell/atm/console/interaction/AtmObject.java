@@ -1,6 +1,6 @@
 package com.honeywell.atm.console.interaction;
 
-import com.honeywell.atm.console.mapper.CommandToRequestDto;
+import com.honeywell.atm.console.mapper.CommandToRequestMapper;
 import com.honeywell.atm.console.model.AtmContext;
 import com.honeywell.atm.console.model.cmd.Command;
 import com.honeywell.atm.console.model.cmd.UserCommand;
@@ -70,7 +70,7 @@ public class AtmObject {
             }
         }
 
-        return CommandToRequestDto.map(command, params);
+        return CommandToRequestMapper.map(command, params);
     }
 
     private void interpretResponse(RequestDto request, ResponseDto response) {
